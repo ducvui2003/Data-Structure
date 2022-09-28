@@ -1,0 +1,14 @@
+package exerceses;
+
+public class Ex6 {
+	public static int multiplicationOfNumberArray(char[] numberArray, int lengthOfArray) {
+		lengthOfArray--;
+		if (lengthOfArray == 0) {
+			return Integer.parseInt(numberArray[lengthOfArray] + "");
+
+		} else {
+			return Integer.parseInt(numberArray[lengthOfArray] + "")
+					+ multiplicationOfNumberArray(numberArray, lengthOfArray);
+		}
+	}
+}

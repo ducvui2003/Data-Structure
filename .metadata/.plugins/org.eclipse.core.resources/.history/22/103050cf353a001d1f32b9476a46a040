@@ -1,0 +1,33 @@
+package atSchool;
+
+import java.nio.file.attribute.AclEntry;
+
+public class Fatorial {
+	public static void main(String[] args) {
+		System.out.println(factorialRecursive(5));
+		System.out.println(factorialRecursive(-1));
+	}
+
+	public static int factorialRecursive(int number) {
+//		if (number < 0) {
+//			throw new RuntimeException("Error");
+//		} else {
+//			if (number == 0) {
+//				return 1;
+//			} else {
+//				return number *= factorialRecursive(number - 1);
+//			}
+//		}
+		try {
+			if (number == 0) {
+				return 1;
+			} else {
+				return number * factorialRecursive(number - 1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return number;
+	}
+
+}

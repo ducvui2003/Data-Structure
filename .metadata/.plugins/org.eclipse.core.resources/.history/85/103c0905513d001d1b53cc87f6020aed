@@ -1,0 +1,20 @@
+package exerceses;
+
+public class Ex2 {
+
+	public static boolean mod3AndMod9NotRecursive(int number) {
+		return number % 3 == 0 || number % 9 == 0;
+	}
+
+	public static boolean mod3AndMod9Recursive(int number) {
+
+	}
+
+	public static int totalArrayNumber(int[] numberArray, int length) {
+		if (length == 0) {
+			return numberArray[length];
+		} else {
+			return numberArray[length] + totalArrayNumber(numberArray, length);
+		}
+	}
+}

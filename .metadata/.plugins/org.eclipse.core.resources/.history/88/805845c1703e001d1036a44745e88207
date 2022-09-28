@@ -1,0 +1,13 @@
+package exerceses;
+
+public class Ex7 {
+public static int countOddNumber (char [] arrayNumber, int lengthOfArray) {
+	if (lengthOfArray==0) {
+		return 
+	}
+}
+
+	public static boolean checkOddNumber(int number) {
+		return number % 2 != 0;
+	}
+}

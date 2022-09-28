@@ -1,0 +1,9 @@
+package atHome;
+
+public class Fibonacci {
+	public static String fibonacci(int number) {
+		if (number == 1 || number == 0) {
+
+		}
+	}
+}

@@ -1,0 +1,20 @@
+package atSchool;
+
+public class Fatorial {
+	public static void main(String[] args) {
+		System.out.println(factorialRecursive(5));
+	}
+
+	public static int factorialRecursive(int number) {
+		if (number < 0) {
+			throw new RuntimeException("Error");
+		} else {
+			if (number == 0) {
+				result = 1;
+			} else {
+				result *= factorialRecursive(number - 1);
+			}
+		}
+		return result;
+	}
+}

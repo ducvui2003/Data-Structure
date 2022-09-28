@@ -1,0 +1,18 @@
+
+public class DecimalToBinary {
+	public static String decimalToBinaryString(int numberDecimal) {
+		int number;
+		int remainder;
+		if (numberDecimal / 2 == 0) {
+			return 1 + "";
+		} else {
+			number = numberDecimal % 2;
+			remainder = numberDecimal / 2;
+			return remainder + "" + decimalToBinaryString(number);
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(decimalToBinaryString(25));
+	}
+}

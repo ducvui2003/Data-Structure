@@ -1,0 +1,12 @@
+package exerceses;
+
+public class Ex11 {
+	public static int findMaxNumberInArray(int[] numberArray, int lengthOfArray) {
+		lengthOfArray--;
+		if (lengthOfArray == 1) {
+			return Math.max(lengthOfArray, 0);
+		} else {
+			return Math.max(lengthOfArray, lengthOfArray - 1);
+		}
+	}
+}

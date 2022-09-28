@@ -1,0 +1,11 @@
+
+public class Fibonacci {
+	public static String fibonacci(int number) {
+		StringBuilder stringBibonnac = new StringBuilder("");
+		if (number == 1) {
+		stringBibonnac.append("1");
+		}else {
+			int fibonacciNumber = 
+		}
+	}
+}

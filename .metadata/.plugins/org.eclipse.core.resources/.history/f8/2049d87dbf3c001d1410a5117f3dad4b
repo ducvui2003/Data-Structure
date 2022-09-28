@@ -1,0 +1,19 @@
+package atHome;
+
+public class Fibonacci {
+	public static void main(String[] args) {
+		System.out.println(fibonacci(5));
+	}
+
+	public static String fibonacci(int number) {
+		String s = "";
+		if (number == 1 || number == 2) {
+			return "1";
+		} else {
+			if ((number - 1) + (number - 2) == number) {
+				s += number + fibonacci(number + 1);
+			}
+		}
+		return s;
+	}
+}

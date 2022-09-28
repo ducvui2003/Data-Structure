@@ -1,0 +1,17 @@
+package exerceses;
+
+public class Ex4 {
+public static int countLengthNumber (int number) {
+	if () {
+		
+	}
+}
+
+	public static int count(int length) {
+		if (length == 0) {
+			return 1;
+		} else {
+			return 1 + count(length--);
+		}
+	}
+}

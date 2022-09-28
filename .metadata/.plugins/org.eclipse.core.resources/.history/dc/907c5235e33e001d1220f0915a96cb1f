@@ -1,0 +1,14 @@
+package exerceses;
+
+public class Ex15 {
+	public static int checkPriceNumber(int number, int numberDecrease) {
+		numberDecrease--;
+		if (number == 1) {
+			return 1;
+		} else {
+			if (number % numberDecrease == 0) {
+				return 0 + checkPriceNumber(number, numberDecrease--);
+			}
+		}
+	}
+}

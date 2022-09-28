@@ -1,0 +1,14 @@
+
+public class DecimalToBinary {
+	public static String decimalToBinaryString(int numberDecimal) {
+		int number;
+		int remainder;
+		if (numberDecimal / 2 == 0) {
+			return numberDecimal / 2 + "";
+		} else {
+			number = numberDecimal % 2;
+			remainder = numberDecimal / 2;
+			return (int) (remainder + "");
+		}
+	}
+}

@@ -1,0 +1,29 @@
+
+public class ShapeFomular {
+	public static double areaTriangle(int ab, int bc, int ac) {
+		int area = 0;
+
+		return area;
+	}
+
+	public static double areaRectangle(int a, int b) {
+		return a * b;
+	}
+
+	public static double areaTrapezoid(int ab, int cd, int height) {
+		double sumOfBases = ab + cd;
+		double area = (1 / 2) * sumOfBases * height;
+		return area;
+	}
+
+	public static double areaParallelogram(int ab, int cd, int height) {
+		double base = (ab + cd) * 2;
+		double area = base * height;
+		return area;
+	}
+
+	public static double areaCircle(int radius) {
+		double area = Math.PI * (radius * radius);
+		return area;
+	}
+}

@@ -1,0 +1,12 @@
+package exerceses;
+
+public class Ex10 {
+	public static String reverseString(char[] arrayNumberChar, int lengthArray) {
+		lengthArray--;
+		if (lengthArray == 0) {
+			return arrayNumberChar[0] + "";
+		} else {
+			return arrayNumberChar[lengthArray] + "" + reverseString(arrayNumberChar, lengthArray);
+		}
+	}
+}

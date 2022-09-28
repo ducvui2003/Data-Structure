@@ -1,0 +1,14 @@
+
+public class Factorial {
+	public static int factorialImple(int number) {
+		if (number < 0) {
+			throw new IllegalArgumentException();
+		} else {
+			if (number == 0) {
+				return 1;
+			} else {
+				return number * factorialImple(number - 1);
+			}
+		}
+	}
+}

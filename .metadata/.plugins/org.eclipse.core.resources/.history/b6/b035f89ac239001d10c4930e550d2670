@@ -1,0 +1,32 @@
+
+public class DecimalToBinary {
+	public static void main(String[] args) {
+		System.out.println(decimalToBinary(25));
+	}
+
+	public static String decimalToBinaryString(int number) {
+		String remainder;
+		int quotient;
+		if (number / 2 == 0) {
+			return "1";
+		} else {
+			remainder = number % 2 + "";
+			quotient = number / 2;
+			return remainder + decimalToBinaryString(quotient);
+		}
+	}
+
+	public static int decimalToBinary(int number) {
+		String binary = decimalToBinaryString(number);
+
+		return (int) Integer.valueOf(stringBuilder);
+	}
+
+	public static char[] reverse(char[] arr) {
+		char[] res = new int[arr.length];
+		for (int i = arr.length - 1; i > -1; i--) {
+			res[i] = arr[arr.length - 1 - i];
+		}
+		return res;
+	}
+}

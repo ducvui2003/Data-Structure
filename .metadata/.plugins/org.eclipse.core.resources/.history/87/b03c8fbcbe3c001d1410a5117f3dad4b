@@ -1,0 +1,7 @@
+package atHome;
+
+public class Fibonacci {
+	public static String fibonacci(int number) {
+
+	}
+}

@@ -1,0 +1,12 @@
+package exerceses;
+
+public class Ex5 {
+	public static int totalNumber(String[] arrayNumber, int length) {
+		length--;
+		if (length == 0) {
+			return Integer.parseInt(arrayNumber[length]);
+		} else {
+			return Integer.parseInt(arrayNumber[length]) + totalNumber(arrayNumber, length);
+		}
+	}
+}

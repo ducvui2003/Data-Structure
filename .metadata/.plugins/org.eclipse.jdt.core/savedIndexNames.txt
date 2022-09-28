@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+D:\University\Year 2\Data Structure\eclipse\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+216681870.index
+2983249468.index
+1509799344.index
+1921065725.index
+611415721.index

@@ -1,0 +1,22 @@
+
+public class DecimalToBinary {
+	public static int decimalToBinaryString(int number) {
+		String remainder;
+		int quotient;
+		if (number / 2 == 0) {
+			return 1;
+		} else {
+			remainder = number % 2 + "";
+			quotient = number / 2;
+			return Integer.parseInt(remainder + decimalToBinaryString(quotient));
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(decimalToBinaryString(25));
+	}
+
+//	public static int decimalToBinary() {
+//
+//	}
+}

@@ -1,0 +1,10 @@
+
+public class DecimalToBinary {
+	public static int decimalToBinary(int numberDecimal) {
+		if (numberDecimal / 2 == 0) {
+return numberDecimal;
+		}else {
+			
+		}
+	}
+}

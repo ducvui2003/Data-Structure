@@ -1,0 +1,31 @@
+package exerceses;
+
+public class Ex11 {
+	public static void main(String[] args) {
+		System.out.println("Greatest Digit of \"902129\": " + findGreatestDigitInNumber(902129));
+	}
+
+	public static int findGreatestDigitInNumber(int number) {
+		if (number > 0) {
+			char[] numberArrayChar = (number + "").toCharArray();
+			int[] numberArrayInt = new int[numberArrayChar.length];
+			for (int i = 0; i < numberArrayInt.length; i++) {
+				numberArrayInt[i] = Integer.parseInt(numberArrayChar[i] + "");
+			}
+			return findGreatestDigitInArray(numberArrayInt, numberArrayInt.length);
+		} else {
+			throw new RuntimeException("Error");
+		}
+	}
+
+	public static int findGreatestDigitInArray(int[] numberArray, int lengthOfArray) {
+		lengthOfArray--;
+		if (lengthOfArray == 1) {
+			return Math.max(numberArray[lengthOfArray], numberArray[0]);
+		} else {
+			int minDigit = Math.max(numberArray[lengthOfArray],
+					findGreatestDigitInArray(numberArray, numberArray[lengthOfArray - 1]));
+			return minDigit;
+		}
+	}
+}

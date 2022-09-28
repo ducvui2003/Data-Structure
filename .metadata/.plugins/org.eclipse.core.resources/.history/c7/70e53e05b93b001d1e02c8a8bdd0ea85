@@ -1,0 +1,11 @@
+import junit.framework.TestCase;
+
+public class FormularTest extends TestCase {
+	public void testAreaTriangle() {
+		try {
+			FormularUtil.getAreaByHeronFormula(4, 2, 1);
+		} catch (Exception e) {
+			assertEquals(e.getMessage(), "It's not triangle");
+		}
+	}
+}
