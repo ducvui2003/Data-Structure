@@ -43,3 +43,5 @@
 1664330156584	Rename local variable 'startIndex'
 1664336278526	Rename local variable 'decimal'
 1664336312124	Rename local variable 'decimalArray'
+1664431109053	Rename local variable 'lengthOfArray'
+1664435434808	Rename method 'totalDigitinNumber'

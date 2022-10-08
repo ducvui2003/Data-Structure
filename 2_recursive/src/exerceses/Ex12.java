@@ -7,26 +7,20 @@ public class Ex12 {
 
 	public static int findSmallestDigitInNumber(int number) {
 		if (number > 0) {
-			char[] numberArrayChar = (number + "").toCharArray();
-			int[] numberArrayInt = new int[numberArrayChar.length];
-			for (int i = 0; i < numberArrayChar.length; i++) {
-				numberArrayInt[i] = Integer.parseInt(numberArrayChar[i] + "");
-			}
-			return findSmallestDigitInArray(numberArrayInt, numberArrayInt.length);
+//			result assign is 9 to compare with digits in number
+//			If result is 0, smallest digit of number always is 0
+			return findSmallestDigitInArray(number + "", 0, 9);
 		} else {
 			throw new RuntimeException("Error");
 		}
 	}
 
-	public static int findSmallestDigitInArray(int[] numberArray, int lengthOfArray) {
-		lengthOfArray--;
-		if (lengthOfArray == 1) {
-			return minNumber(numberArray[1], numberArray[0]);
-		} else {
-			int minDegit = minNumber(numberArray[lengthOfArray],
-					findSmallestDigitInArray(numberArray, numberArray[lengthOfArray]));
-			return minDegit;
+	public static int findSmallestDigitInArray(String number, int indexDigitNow, int result) {
+		if (indexDigitNow < number.length()) {
+			result = minNumber(Integer.parseInt(number.charAt(indexDigitNow) + ""),
+					findSmallestDigitInArray(number, indexDigitNow + 1, result));
 		}
+		return result;
 	}
 
 	public static int minNumber(int number1, int number2) {

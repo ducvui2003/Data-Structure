@@ -3,6 +3,7 @@ package exerceses;
 public class Ex3 {
 	public static void main(String[] args) {
 		System.out.println("18 divisible 3 and 18 not divisible 9?: " + mod3AndMod9NotRecursive(18));
+		System.out.println(totalDigitInNumber(11231));
 		System.out.println("21 divisible 3 and 18 not divisible 9 (Recursive)?: " + mod3AndMod9Recursive(21));
 	}
 
@@ -26,6 +27,14 @@ public class Ex3 {
 			return numberArray[length];
 		} else {
 			return numberArray[length] + totalArrayNumber(numberArray, length);
+		}
+	}
+
+	public static int totalDigitInNumber(int number) {
+		if (number == 0) {
+			return number;
+		} else {
+			return number % 10 + totalDigitInNumber(number / 10);
 		}
 	}
 }

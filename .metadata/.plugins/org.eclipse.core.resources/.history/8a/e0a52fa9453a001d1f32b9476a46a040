@@ -1,6 +1,0 @@
-
-public class Fibonacci {
-	public static String fibonacci(int number) {
-		StringBuilder stringBibonnac = new StringBuilder("");
-	}
-}

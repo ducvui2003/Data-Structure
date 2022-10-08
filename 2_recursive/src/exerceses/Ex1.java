@@ -2,11 +2,16 @@ package exerceses;
 
 public class Ex1 {
 	public static void main(String[] args) {
-		System.out.println("Convert \"45\" ro decimal number (Recursive): " + decimalToDecimalRecursive(45));
+		System.out.println("Convert \"45\" ro decimal number (Recursive): " + decimalToDecimalNotReverse(45));
 		System.out.println("Convert \"45\" ro decimal number: " + decimalToDecimalNotRecursive(45));
+		System.out.println("Convert \"45\" ro decimal number: " + decimalToDecimalNotRecursive(10));
+		System.out.println(decToBin(84));
 		System.out.println("------------------------------------------------------------------------------------");
 		System.out.println("Convert \"110110\" ro decimal number (Recursive): " + binaryToDecimalRecursive(110110));
 		System.out.println("Convert \"110110\" ro decimal number: " + binaryToDecimalNotRecursive(110110));
+		System.out.println(binaryToDecimalRecursive2("110000110", "110000110".length() - 1, 0));
+		System.out.println("------------------------------------------------------------------------------------");
+
 	}
 
 // Decimal to Binary
@@ -18,12 +23,13 @@ public class Ex1 {
 
 	public static String decimalToDecimalNotReverse(int decimal) {
 		String stringBinary = "";
-		if (decimal / 2 == 0) {
-			return "1";
+		if (decimal == 0) {
+
 		} else {
 			stringBinary += (decimal % 2);
-			return stringBinary + decimalToDecimalNotReverse(decimal / 2);
+			stringBinary += decimalToDecimalNotReverse(decimal / 2);
 		}
+		return stringBinary;
 	}
 
 // Using While
@@ -35,6 +41,14 @@ public class Ex1 {
 		}
 		stringBinaryNotReverse += "1";
 		return Integer.parseInt(reverseString(stringBinaryNotReverse));
+	}
+
+// Using divide to get 
+	public static int decToBin(int n) {
+		int result = 0;
+		if (n / 2 == 0)// stop
+			return n % 2;
+		return result += (decToBin(n / 2) * 10) + n % 2;
 	}
 
 //	--------------------------------------------------------------------
@@ -60,10 +74,10 @@ public class Ex1 {
 // Using Recursive
 	public static int binaryToDecimalRecursive(int binary) {
 		char[] decimalArray = (reverseString("" + binary)).toCharArray();
-		return binaryToDecimalRecursiveTemp(decimalArray, decimalArray.length);
+		return binaryToDecimalRecursive1(decimalArray, decimalArray.length);
 	}
 
-	public static int binaryToDecimalRecursiveTemp(char[] binaryArray, int length) {
+	public static int binaryToDecimalRecursive1(char[] binaryArray, int length) {
 		length--;
 		if (length == 0) {
 			if (binaryArray[length] == '1')
@@ -72,10 +86,20 @@ public class Ex1 {
 				return 0;
 		} else {
 			if (binaryArray[length] == '1')
-				return (1 * (int) Math.pow(2, length)) + binaryToDecimalRecursiveTemp(binaryArray, length);
+				return (1 * (int) Math.pow(2, length)) + binaryToDecimalRecursive1(binaryArray, length);
 			else
-				return (0 * (int) Math.pow(2, length)) + binaryToDecimalRecursiveTemp(binaryArray, length);
+				return (0 * (int) Math.pow(2, length)) + binaryToDecimalRecursive1(binaryArray, length);
 		}
+
+	}
+
+// Using CharAt to get char in Binary (String) with index char is cursor. Using result to return output
+	public static int binaryToDecimalRecursive2(String biNum, int cursor, int result) {
+		if (cursor > -1) {
+			result += Integer.parseInt(biNum.charAt(cursor) + "") * Math.pow(2, biNum.length() - cursor - 1)
+					+ binaryToDecimalRecursive2(biNum, cursor - 1, result);
+		}
+		return result;
 
 	}
 
@@ -83,4 +107,5 @@ public class Ex1 {
 		StringBuilder stringBuilder = new StringBuilder(string);
 		return stringBuilder.reverse().toString();
 	}
+
 }

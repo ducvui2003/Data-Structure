@@ -1,0 +1,15 @@
+package exerceses;
+
+public class Ex17 {
+	public static void main(String[] args) {
+		System.out.println("S(n) = 1^2 + 2^2 + 3^2 + ... + (n-1)^2 + n^2, with n =100: " + equals(100));
+	}
+
+	public static int equals(int n) {
+		if (n == 1) {
+			return 1 * 2;
+		} else {
+			return n * 2 + equals(n - 1);
+		}
+	}
+}

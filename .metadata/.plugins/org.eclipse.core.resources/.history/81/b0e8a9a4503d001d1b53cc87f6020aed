@@ -1,8 +1,0 @@
-package exerceses;
-
-public class Ex2 {
-
-	public static boolean mod3AndMod9NotRecursive(int number) {
-		return number % 3 == 0 || number % 9 == 0;
-	}
-}

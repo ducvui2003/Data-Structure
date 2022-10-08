@@ -16,7 +16,7 @@ public class GreatestCommonDivisor {
 		if (a % b == 0) {
 			return b;
 		} else {
-			return greatestCommonDivisor(Math.max(a - b, b), Math.min(a - b, b));
+			return greatestCommonDivisor(b, a % b);
 		}
 	}
 }

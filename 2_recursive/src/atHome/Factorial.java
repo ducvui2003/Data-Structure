@@ -14,6 +14,7 @@ public class Factorial {
 	}
 
 	public static void main(String[] args) {
+	System.out.println((char)('a'+1));
 		System.out.println(factorialImple(5));
 	}
 }

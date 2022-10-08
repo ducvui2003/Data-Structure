@@ -1,0 +1,11 @@
+package exerceses;
+
+public class Ex17 {
+public static int equals(int n) {
+if (n ==1) {
+	return 1*2;
+}else {
+	return n*2+ equals(n-1);
+}
+}
+}
