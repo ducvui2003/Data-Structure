@@ -23,11 +23,59 @@ public class Student {
 		return totals;
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getAccademicYear() {
+		return accademicYear;
+	}
+
+	public void setAccademicYear(String accademicYear) {
+		this.accademicYear = accademicYear;
+	}
+
+	public double getMath() {
+		return math;
+	}
+
+	public void setMath(double math) {
+		this.math = math;
+	}
+
+	public double getChemistry() {
+		return chemistry;
+	}
+
+	public void setChemistry(double chemistry) {
+		this.chemistry = chemistry;
+	}
+
+	public double getPhysical() {
+		return physical;
+	}
+
+	public void setPhysical(double physical) {
+		this.physical = physical;
+	}
+
 	@Override
 	public String toString() {
-		return "Id: " + this.id + "\tFull name: " + this.fullName + "\tStudent Year: " + this.accademicYear
-				+ "\n\tMath: " + this.math + "\n\tChemistry: " + this.chemistry + "\n\tPhysical: " + this.physical
-				+ "\n\t--> Average: " + this.getAverageScorce();
+		return "Id: " + getId() + "\tFull name: " + getFullName() + "\tStudent Year: " + getAccademicYear()
+				+ "\n\tMath: " + getMath() + "\n\tChemistry: " + getChemistry() + "\n\tPhysical: " + getChemistry()
+				+ "\n\t--> Average: " + getAverageScorce();
 	}
 
 }

@@ -11,7 +11,10 @@ public class Ex1 {
 		System.out.println("Convert \"110110\" ro decimal number: " + binaryToDecimalNotRecursive(110110));
 		System.out.println(binaryToDecimalRecursive2("110000110", "110000110".length() - 1, 0));
 		System.out.println("------------------------------------------------------------------------------------");
-
+		System.out.println(decToBin(45));
+		System.out.println((110110 + "").length());
+		System.out.println(Integer.parseInt((10111 + "").charAt(0) + ""));
+		System.out.println(biToDec(110110, (110110 + "").length()));
 	}
 
 // Decimal to Binary
@@ -45,10 +48,9 @@ public class Ex1 {
 
 // Using divide to get 
 	public static int decToBin(int n) {
-		int result = 0;
 		if (n / 2 == 0)// stop
 			return n % 2;
-		return result += (decToBin(n / 2) * 10) + n % 2;
+		return (decToBin(n / 2) * 10) + n % 2;
 	}
 
 //	--------------------------------------------------------------------
@@ -108,4 +110,14 @@ public class Ex1 {
 		return stringBuilder.reverse().toString();
 	}
 
+	public static int biToDec(int number, int i) {
+		int result = 0;
+		if (i == 0) {
+			return result;
+		} else {
+			int digit = Integer.parseInt((number + "").charAt(i - 1) + "");
+
+			return result = digit * (int) Math.pow(2, (number + "").length() - i) + biToDec(number, i - 1);
+		}
+	}
 }

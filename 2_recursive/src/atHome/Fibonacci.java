@@ -8,20 +8,20 @@ public class Fibonacci {
 
 	public static String fibonacciString(int number) {
 		String s = "";
-		for (int i = 0; i < number; i++) {
+		for (int i = 1; i < number; i++) {
 			s += fibonacci(i) + " ";
 		}
 		return s;
 	}
 
 	public static int fibonacci(int number) {
-		if (number < 0) {
-			return -1;
+		if (number < 1) {
+			throw new RuntimeException("Erorr");
 		} else {
-			if (number == 0 || number == 1) {
+			if (number == 1|| number == 2) {
 				return 1;
 			} else {
-				return number = fibonacci(number - 1) + fibonacci(number - 2);
+				return fibonacci(number - 1) + fibonacci(number - 2);
 			}
 		}
 	}
