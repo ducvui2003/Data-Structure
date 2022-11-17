@@ -1,0 +1,7 @@
+Ly My An	75	ST1
+Cao Dinh Binh	15	ST2
+Hoang Anh Binh	27	ST1
+Duong Minh Nghe	34	ST3
+Hoang Manh Hung	45	ST4
+Cao Van Thanh	12	ST1
+Luu Thanh Vang	23	ST2

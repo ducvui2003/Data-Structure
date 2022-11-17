@@ -51,7 +51,7 @@ public class MinesweeperGame {
 			for (int i = 0; i < this.matrix.length; i++) {
 				for (int j = 0; j < this.matrix[i].length; j++) {
 					if (this.matrix[i][j] != -1) {
-						this.matrix[i][j] = rd.nextInt(4);
+						this.matrix[i][j] = rd.nextInt(1);
 					}
 				}
 			}
