@@ -1,5 +1,6 @@
 package iterator;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.ListIterator;
@@ -29,9 +30,24 @@ public class FamiliarIterator {
 //		listInt.previous();
 //		System.out.println(listInt.next());
 //		System.out.println(listDouble.next());
+		
+		Iterator<Integer> iteInt = Arrays.asList(arrayInt).iterator();
+//		Run to last element and stop
+//		System.out.println(iteInt.next());
+//		System.out.println(iteInt.next());
+//		System.out.println(iteInt.next());
+//		System.out.println(iteInt.next());
+//		System.out.println(iteInt.next());
+//		System.out.println(iteInt.next());
 	}
 
 	public void convertArrayToIterator(int[] array) {
 
+	}
+
+	public static void resetIterator(ListIterator<Integer> ite) {
+		while (ite.hasNext()) {
+			ite.next();
+		}
 	}
 }
